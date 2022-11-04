@@ -3,6 +3,11 @@ package com.home;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/*
+Stable sort
+quadratic algorithm
+O (n2)
+ */
 public class BubbleSortSolution {
 
     public static void main(String[] args) {
@@ -12,38 +17,33 @@ public class BubbleSortSolution {
     }
 
     private static int[] intArray() {
-
         System.out.println("Enter number of element to sort :");
         Scanner input = new Scanner(System.in);// User input
-        int array[]=new int[input.nextInt()];
+        int array[] = new int[input.nextInt()];
         System.out.println("Enter  the element one by one");
-        for (int i=0;i<array.length;i++) // used for loop for user input
-        {
-            array[i]=input.nextInt(); // Assigned users value to array
+        for (int i = 0; i < array.length; i++) {
+            array[i] = input.nextInt();
         }
-
         return array;
     }
 
     private static void bubbleSort(int[] intArray) {
-        int unsortedPartitionedIndex = intArray.length-1;
-        while (unsortedPartitionedIndex > 0){
-            for (int i =0;i < unsortedPartitionedIndex;i++){
-
-                if(intArray[i] > intArray[i+1]){
-                        swap(intArray, i);
+        int unsortedPartitionedIndex = intArray.length - 1;
+        while (unsortedPartitionedIndex > 0) {
+            for (int i = 0; i < unsortedPartitionedIndex; i++) {
+                if (intArray[i] > intArray[i + 1]) {
+                    swap(intArray, i);
                 }
-
             }
-            unsortedPartitionedIndex --;
+            unsortedPartitionedIndex--;
         }
-        Arrays.stream(intArray).forEach(i-> System.out.println(i));
+        Arrays.stream(intArray).forEach(System.out::println);
     }
 
     private static void swap(int[] intArray, int i) {
         int temp = intArray[i];
-        intArray[i] = intArray[i+1];
-        intArray[i+1] = temp;
+        intArray[i] = intArray[i + 1];
+        intArray[i + 1] = temp;
     }
 }
 

@@ -1,10 +1,18 @@
 # Algorithms
-Understanding algorithms and Data Structure.
+- Understanding algorithms and Data Structure.
 
-# Unstable Sort
+#Stable Sort
+- In the sorted array, the duplicate items will preserve the order of the item.
 
+#Unstable Sort
+- In the shorted array, duplicate item will not preserve the order of item.
 
-# Stable Sort
+#Bubble sort
+- In the bubble sort algorithm we go swap the element and move the largest element 
+to the end and decrease the unsorted index by 1. So in this case, everytime we iterate the largest element
+  will move to the end of array.
+  
+#Selection Sort
 
 
 # Insertion Sort
